@@ -64,28 +64,16 @@ namespace Kyrio.Services
         public void TestSetTestProperties()
         {
             var account = new KyrioAccount();
-            account.ServerUrl = "https://api.kyrio.com:8080";
-            Assert.Equal("https://api.kyrio.com:8080", account.ServerUrl);
+            account.ClientId = "123456";
 
-            try
-            {
-                account.ServerUrl = "xyz";
-                Assert.True(false, "Must validate serverUrl");
-            }
-            catch
-            {
-                // Expected exception
-            }
+            account.EnableTestError = true;
+            Assert.True(account.EnableTestError);
 
-            try
-            {
-                account.ServerUrl = null;
-                Assert.True(false, "Must validate serverUrl");
-            }
-            catch
-            {
-                // Expected exception
-            }
+            account.EnableTestMock = true;
+            Assert.True(account.EnableTestMock);
+
+            account.EnableTestLocal = true;
+            Assert.True(account.EnableTestLocal);
         }
 
         [Fact]
