@@ -1,4 +1,4 @@
-﻿namespace Kyrio.Services.Shared
+﻿namespace Kyrio.Services
 {
     public  class ErrorCode
     {

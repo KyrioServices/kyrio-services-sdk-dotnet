@@ -1,9 +1,7 @@
 ﻿using System;
-using System.Runtime.Serialization;
 
-namespace Kyrio.Services.Shared
+namespace Kyrio.Services
 {
-    [DataContract]
     public class KyrioException: ApplicationException
     {
         public KyrioException(string message)
@@ -24,7 +22,7 @@ namespace Kyrio.Services.Shared
             Status = status;
         }
 
-        public string Code { get; set; }
-        public int Status { get; set; }
+        public string Code { get; }
+        public int Status { get; }
     }
 }
