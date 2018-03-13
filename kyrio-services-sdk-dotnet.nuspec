@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>Kyrio.Services</id>
+    <version>1.0.0</version>
+    <title>Kyrio.Services</title>
+    <authors>Kyrio</authors>
+
+    <projectUrl>https://github.com/KyrioServices/kyrio-services-sdk-dotnet</projectUrl>
+    <licenseUrl>http://opensource.org/licenses/MIT</licenseUrl>
+    <iconUrl>http://www.kyrio.com/wp-content/uploads/2016/06/big_kyrio_logo.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+
+    <description>.NET SDK to Kyrio Online Services</description>
+    <releaseNotes>Release</releaseNotes>
+    <copyright>Kyrio 2018</copyright>
+    <tags>kyrio cable sdk serviceability</tags>
+
+    <dependencies>
+      <group targetFramework=".NETStandard2.0">
+        <dependency id="Newtonsoft.Json" version="11.0.1" />
+      </group>
+    </dependencies>
+  </metadata>
+
+  <files>
+    <file src="src\bin\Release\netstandard2.0\Kyrio.Services.deps.json" target="lib\netstandard2.0" />
+    <file src="src\bin\Release\netstandard2.0\Kyrio.Services.dll" target="lib\netstandard2.0" />
+    <file src="src\bin\Release\netstandard2.0\Kyrio.Services.pdb" target="lib\netstandard2.0" />
+  </files>
+</package>

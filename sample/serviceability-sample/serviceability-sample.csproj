@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <RootNamespace>Kyrio.Services.Samples.Serviceability</RootNamespace>
+    <PackageId>Kyrio.Services.Samples.Serviceability</PackageId>
+    <Authors>Sergey Seroukhov</Authors>
+    <Company>Kyrio</Company>
+    <Product>.NET SDK for Kyrio Online Services</Product>
+    <Copyright>Kyrio</Copyright>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\src.csproj" />
+  </ItemGroup>
+
+</Project>
