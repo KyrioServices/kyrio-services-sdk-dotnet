@@ -23,7 +23,7 @@ namespace Kyrio.Services.Shared
         private HttpClient CreateClient()
         {
             var client = new HttpClient();
-            client.DefaultRequestHeaders.Add("accepts", "application/json");
+            client.DefaultRequestHeaders.Add("accept", "application/json");
             client.DefaultRequestHeaders.Add("client-id", _account.ClientId);
             client.DefaultRequestHeaders.Add("enable-test-mock", _account.EnableTestMock ? "true" : "false");
             client.DefaultRequestHeaders.Add("enable-test-error", _account.EnableTestError ? "true" : "false");
