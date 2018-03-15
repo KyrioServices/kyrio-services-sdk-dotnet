@@ -17,7 +17,7 @@ namespace Kyrio.Services.Serviceability
         [EnumMember(Value = "near_net")]
         NearNet,
 
-        [EnumMember(Value = "servey_req")]
+        [EnumMember(Value = "survey_req")]
         SurveyRequired,
 
         [EnumMember(Value = "proximity")]
