@@ -20,7 +20,7 @@ namespace Kyrio.Services.Shared
         [DataMember(Name = "postal_code")]
         public string PostalCode { get; set; }
 
-        [DataMember(Name = "country")]
-        public string Country { get; set; }
+        [DataMember(Name = "country_code")]
+        public string CountryCode { get; set; }
     }
 }

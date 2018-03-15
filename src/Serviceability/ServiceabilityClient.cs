@@ -15,7 +15,7 @@ namespace Kyrio.Services.Serviceability
 
         public async Task<ServiceabilityResult[]> DetermineBusinessServiceabilityAsync(
             string addressLine1, string addressLine2, string city,
-            string state, string postalCode, string country)
+            string state, string postalCode, string countryCode)
         {
             var address = new Address
             {
@@ -24,7 +24,7 @@ namespace Kyrio.Services.Serviceability
                 City = city,
                 State = state,
                 PostalCode = postalCode,
-                Country = country
+                CountryCode = countryCode
             };
 
             return await DetermineBusinessServiceabilityForAddressAsync(address);
@@ -47,7 +47,7 @@ namespace Kyrio.Services.Serviceability
                 { "city", address.City },
                 { "state", address.State },
                 { "postal_code", address.PostalCode },
-                { "country", address.Country }
+                { "country_code", address.CountryCode }
             };
 
             // Invoke operation on the server
