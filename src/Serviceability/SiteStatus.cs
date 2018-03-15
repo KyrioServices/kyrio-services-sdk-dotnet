@@ -35,7 +35,7 @@ namespace Kyrio.Services.Serviceability
         /// <summary>
         /// Indicates the MSO must conduct additional analysis to determine if the site can be served
         /// </summary>
-        [EnumMember(Value = "servey_req")]
+        [EnumMember(Value = "survey_req")]
         SurveyRequired,
 
         /// <summary>
