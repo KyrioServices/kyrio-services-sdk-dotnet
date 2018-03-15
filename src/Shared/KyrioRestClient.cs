@@ -8,10 +8,20 @@ using System.Threading.Tasks;
 
 namespace Kyrio.Services.Shared
 {
-    public class KyrioRestClient
+    /// <summary>
+    /// Abstract implementation of REST clients to call Kyrio services.
+    /// </summary>
+    public abstract class KyrioRestClient
     {
+        /// <summary>
+        /// Kyrio account associated with this client
+        /// </summary>
         protected KyrioAccount _account;
 
+        /// <summary>
+        /// Constracts this client and sets initial values.
+        /// </summary>
+        /// <param name="account">A Kyrio account associated witht his client.</param>
         public KyrioRestClient(KyrioAccount account)
         {
             if (account == null)
@@ -20,6 +30,10 @@ namespace Kyrio.Services.Shared
             _account = account;
         }
 
+        /// <summary>
+        /// Creates HTTPClient and sets default headers for all REST calls.
+        /// </summary>
+        /// <returns>Created HTTPClient</returns>
         private HttpClient CreateClient()
         {
             var client = new HttpClient();
@@ -30,6 +44,12 @@ namespace Kyrio.Services.Shared
             return client;
         }
 
+        /// <summary>
+        /// Composes service URL based on server URL, operation route and parameters.
+        /// </summary>
+        /// <param name="route">Base operation route</param>
+        /// <param name="parameters">Operation query parameters</param>
+        /// <returns>Operation URI</returns>
         private Uri ComposeRequestUri(string route, IDictionary<string, object> parameters)
         {
             var builder = new StringBuilder(_account.ServerUrl);
@@ -46,6 +66,11 @@ namespace Kyrio.Services.Shared
             return new Uri(uri, UriKind.Absolute);
         }
 
+        /// <summary>
+        /// Composes query parameters into encoded string.
+        /// </summary>
+        /// <param name="parameters">Operation query parameters</param>
+        /// <returns>Encoded query parameter string</returns>
         private string ComposeQueryParams(IDictionary<string, object> parameters)
         {
             if (parameters == null) return "";
@@ -68,6 +93,11 @@ namespace Kyrio.Services.Shared
             return builder.ToString();
         }
 
+        /// <summary>
+        /// Creates request content object with JSON representation of send data.
+        /// </summary>
+        /// <param name="value">Value to be passed in request body.</param>
+        /// <returns>JSON representation of value wrapped intp HttpContent</returns>
         private HttpContent CreateRequestContent(object value)
         {
             if (value == null) return null;
@@ -88,6 +118,12 @@ namespace Kyrio.Services.Shared
             return result;
         }
 
+        /// <summary>
+        /// Parses response body into specified object type
+        /// </summary>
+        /// <typeparam name="T">Expected type of response object</typeparam>
+        /// <param name="response">Http response message</param>
+        /// <returns>Parsed response object of specified type or <code>null</code></returns>
         private async Task<T> ParseResponseContentAsync<T>(HttpResponseMessage response)
         {
             var responseContent = await response.Content.ReadAsStringAsync();
@@ -104,6 +140,11 @@ namespace Kyrio.Services.Shared
             return result;
         }
 
+        /// <summary>
+        /// Parses error sent in response body
+        /// </summary>
+        /// <param name="response">Http response message</param>
+        /// <returns>Parsed error message or <code>null</code></returns>
         private async Task<string> ParseResponseErrorAsync(HttpResponseMessage response)
         {
             var responseContent = await response.Content.ReadAsStringAsync();
@@ -120,7 +161,16 @@ namespace Kyrio.Services.Shared
             return result;
         }
 
-        public async Task<T> InvokeAsync<T>(string method, string route, IDictionary<string, object> parameters, object body)
+        /// <summary>
+        /// Performs invocation of REST operation.
+        /// </summary>
+        /// <typeparam name="T">Expected type of response object.</typeparam>
+        /// <param name="method">Operation method: GET, POST, PUT or DELETE</param>
+        /// <param name="route">Operation base route</param>
+        /// <param name="parameters">Operation query parameters</param>
+        /// <param name="body">Value to be sent in request body</param>
+        /// <returns>Value returned by the server of expected type.</returns>
+        protected async Task<T> InvokeAsync<T>(string method, string route, IDictionary<string, object> parameters, object body)
         {
             if (string.IsNullOrEmpty(_account.ClientId))
                 throw new ArgumentException("ClientId is not set");

@@ -5,6 +5,9 @@ using System.Threading.Tasks;
 
 namespace Kyrio.Services.Serviceability
 {
+    /// <summary>
+    /// Client to access Kyrio Serviceability API
+    /// </summary>
     public class ServiceabilityClient: KyrioRestClient
     {
         private const string BASE_ROUTE = "/api/v1";
@@ -13,6 +16,19 @@ namespace Kyrio.Services.Serviceability
             : base(account)
         { }
 
+        /// <summary>
+        /// Determines cable providers that serve location specified by it's postal address.
+        /// The method supports incomplete addresses: addressLine1 and postalCode
+        /// or addressLine1, city and state.
+        /// </summary>
+        /// <param name="addressLine1">Street number, pre-directional, street name, suffix, post-directional</param>
+        /// <param name="addressLine2">Secondary address line such as Apt, Suite or Lot</param>
+        /// <param name="city">City or town name</param>
+        /// <param name="state">For US addresses, usethe standard 2-character state abbreviation</param>
+        /// <param name="postalCode">For US addresses, use the 5-digit ZIP code</param>
+        /// <param name="countryCode">Use ‘US’ to indicate US addresses.  If the argument is omitted, ‘US’ will be assumed.
+        /// Refer to ISO 3166 Country Code Standardfor non-US addresses.</param>
+        /// <returns>Array of serviceability results from cable providers</returns>
         public async Task<ServiceabilityResult[]> DetermineBusinessServiceabilityAsync(
             string addressLine1, string addressLine2, string city,
             string state, string postalCode, string countryCode)
@@ -30,6 +46,11 @@ namespace Kyrio.Services.Serviceability
             return await DetermineBusinessServiceabilityForAddressAsync(address);
         }
 
+        /// <summary>
+        /// Determines cable providers that serve location specified by it's postal address.
+        /// </summary>
+        /// <param name="address">Location postal address</param>
+        /// <returns>Array of serviceability results from cable providers</returns>
         public async Task<ServiceabilityResult[]> DetermineBusinessServiceabilityForAddressAsync(Address address)
         {
             if (address == null)
@@ -54,12 +75,17 @@ namespace Kyrio.Services.Serviceability
             return await InvokeAsync<ServiceabilityResult[]>("GET", route, parameters, null);
         }
 
+        /// <summary>
+        /// Generates random test serviceability response.
+        /// </summary>
+        /// <param name="address">Location postal address</param>
+        /// <returns>Array of serviceability results from cable providers</returns>
         private async Task<ServiceabilityResult[]> MockDetermineBusinessServiceabilityAsync(Address address)
         {
             await Task.Delay(1500);
 
             // Simulate random errors
-            if (this._account.EnableTestError && RandomData.Chance(1, 10))
+            if (this._account.EnableTestError && RandomData.Chance(1, 100))
                 throw RandomData.NextError();
 
             // Generate random results

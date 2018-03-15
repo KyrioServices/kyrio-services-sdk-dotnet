@@ -2,9 +2,16 @@
 
 namespace Kyrio.Services.Shared
 {
+    /// <summary>
+    /// Random data generator used to simulate server responses.
+    /// </summary>
     public static class RandomData
     {
         private static readonly System.Random _random = new System.Random();
+
+        /// <summary>
+        /// All currently connected cable providers
+        /// </summary>
         public static Provider[] PROVIDERS = new Provider[]
         {
             new Provider { Id = "1002", Name = "Time Warner Cable" },
@@ -26,11 +33,22 @@ namespace Kyrio.Services.Shared
             new Provider { Id = "1237", Name = "NewMythical Cable" }
         };
 
+        /// <summary>
+        /// Generates random integer less or equal to max value.
+        /// </summary>
+        /// <param name="maxValue">Maximum for random values</param>
+        /// <returns>A random integer value</returns>
         public static int NextInteger(int maxValue)
         {
             return _random.Next(maxValue);
         }
 
+        /// <summary>
+        /// Generates random integer within specified range
+        /// </summary>
+        /// <param name="minValue">Minimum for random values</param>
+        /// <param name="maxValue">Maximum for random values</param>
+        /// <returns>A random integer value</returns>
         public static int NextInteger(int minValue, int maxValue)
         {
             if (maxValue - minValue <= 0)
@@ -39,6 +57,12 @@ namespace Kyrio.Services.Shared
             return minValue + _random.Next(maxValue - minValue);
         }
 
+        /// <summary>
+        /// Picks a random element from values arra.
+        /// </summary>
+        /// <typeparam name="T">Type of random value</typeparam>
+        /// <param name="values">Array with possible values</param>
+        /// <returns>A random value</returns>
         public static T Pick<T>(T[] values)
         {
             if (values == null || values.Length == 0)
@@ -47,6 +71,12 @@ namespace Kyrio.Services.Shared
             return values[NextInteger(values.Length)];
         }
 
+        /// <summary>
+        /// Determines a random chance from maximum chances.
+        /// </summary>
+        /// <param name="chances">Number of chances to test</param>
+        /// <param name="maxChances">Maximum number of chances</param>
+        /// <returns><code>true</code> is chance happend or <code>false</code> otherwise.</returns>
         public static bool Chance(float chances, float maxChances)
         {
             chances = chances >= 0 ? chances : 0;
@@ -61,16 +91,28 @@ namespace Kyrio.Services.Shared
             return hit >= start && hit <= end;
         }
 
+        /// <summary>
+        /// Generates random boolean value
+        /// </summary>
+        /// <returns>A random boolean value</returns>
         public static bool NextBoolean()
         {
             return _random.Next(100) < 50;
         }
 
+        /// <summary>
+        /// Picks a random cable provider from the list of registered providers.
+        /// </summary>
+        /// <returns>A random cable provider.</returns>
         public static Provider NextProvider()
         {
             return Pick<Provider>(PROVIDERS);
         }
 
+        /// <summary>
+        /// Generates a random error returned by Kyrio services.
+        /// </summary>
+        /// <returns>A random error</returns>
         public static KyrioException NextError()
         {
             return Chance(1, 2)

@@ -3,7 +3,7 @@
   <metadata>
     <id>Kyrio.Services</id>
     <version>1.0.0</version>
-    <title>Kyrio.Services</title>
+    <title>Kyrio Online Services .NET SDK</title>
     <authors>Kyrio</authors>
 
     <projectUrl>https://github.com/KyrioServices/kyrio-services-sdk-dotnet</projectUrl>
@@ -11,7 +11,7 @@
     <iconUrl>http://www.kyrio.com/wp-content/uploads/2016/06/big_kyrio_logo.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
 
-    <description>.NET SDK to Kyrio Online Services</description>
+    <description>Client SDK to Kyrio Online Services in .NET</description>
     <releaseNotes>Release</releaseNotes>
     <copyright>Kyrio 2018</copyright>
     <tags>kyrio cable sdk serviceability</tags>
