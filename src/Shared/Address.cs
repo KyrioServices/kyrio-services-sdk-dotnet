@@ -30,7 +30,7 @@ namespace Kyrio.Services.Shared
         public string City { get; set; }
 
         /// <summary>
-        /// For US addresses, usethe standard 2-character state abbreviation
+        /// For US addresses, use the standard 2-character state abbreviation
         /// </summary>
         [DataMember(Name = "state")]
         public string State { get; set; }
@@ -43,7 +43,7 @@ namespace Kyrio.Services.Shared
 
         /// <summary>
         /// Use ‘US’ to indicate US addresses.  If the argument is omitted, ‘US’ will be assumed.
-        /// Refer to ISO 3166 Country Code Standardfor non-US addresses.
+        /// Refer to ISO 3166 Country Code Standard for non-US addresses.
         /// </summary>
         [DataMember(Name = "country_code")]
         public string CountryCode { get; set; }

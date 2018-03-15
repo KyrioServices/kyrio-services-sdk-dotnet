@@ -9,7 +9,7 @@ namespace Kyrio.Services.Serviceability
     public enum SiteStatus
     {
         /// <summary>
-        /// Service is not available
+        /// Indicates that cable services are not available
         /// </summary>
         [EnumMember(Value = "none")]
         None,

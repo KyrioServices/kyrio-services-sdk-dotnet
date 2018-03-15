@@ -19,9 +19,9 @@ namespace Kyrio.Services.Shared
         protected KyrioAccount _account;
 
         /// <summary>
-        /// Constracts this client and sets initial values.
+        /// Constructs this client and sets initial values.
         /// </summary>
-        /// <param name="account">A Kyrio account associated witht his client.</param>
+        /// <param name="account">A Kyrio account associated with his client.</param>
         public KyrioRestClient(KyrioAccount account)
         {
             if (account == null)
@@ -31,9 +31,9 @@ namespace Kyrio.Services.Shared
         }
 
         /// <summary>
-        /// Creates HTTPClient and sets default headers for all REST calls.
+        /// Creates HTTP client and sets default headers for all REST calls.
         /// </summary>
-        /// <returns>Created HTTPClient</returns>
+        /// <returns>Created HTTP client</returns>
         private HttpClient CreateClient()
         {
             var client = new HttpClient();
@@ -162,7 +162,7 @@ namespace Kyrio.Services.Shared
         }
 
         /// <summary>
-        /// Performs invocation of REST operation.
+        /// Invokes REST operation on the server and handles the response.
         /// </summary>
         /// <typeparam name="T">Expected type of response object.</typeparam>
         /// <param name="method">Operation method: GET, POST, PUT or DELETE</param>

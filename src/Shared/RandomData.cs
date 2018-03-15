@@ -36,7 +36,7 @@ namespace Kyrio.Services.Shared
         /// <summary>
         /// Generates random integer less or equal to max value.
         /// </summary>
-        /// <param name="maxValue">Maximum for random values</param>
+        /// <param name="maxValue">A maximum for random values</param>
         /// <returns>A random integer value</returns>
         public static int NextInteger(int maxValue)
         {
@@ -46,8 +46,8 @@ namespace Kyrio.Services.Shared
         /// <summary>
         /// Generates random integer within specified range
         /// </summary>
-        /// <param name="minValue">Minimum for random values</param>
-        /// <param name="maxValue">Maximum for random values</param>
+        /// <param name="minValue">A minimum for random values</param>
+        /// <param name="maxValue">A maximum for random values</param>
         /// <returns>A random integer value</returns>
         public static int NextInteger(int minValue, int maxValue)
         {
@@ -58,7 +58,7 @@ namespace Kyrio.Services.Shared
         }
 
         /// <summary>
-        /// Picks a random element from values arra.
+        /// Picks a random element from values array.
         /// </summary>
         /// <typeparam name="T">Type of random value</typeparam>
         /// <param name="values">Array with possible values</param>
