@@ -14,23 +14,23 @@ namespace Kyrio.Services.Shared
         /// </summary>
         public static Provider[] PROVIDERS = new Provider[]
         {
-            new Provider { Id = "1002", Name = "Time Warner Cable" },
-            new Provider { Id = "1005", Name = "Comcast" },
-            new Provider { Id = "1008", Name = "Adelphia" },
-            new Provider { Id = "1010", Name = "Cox Communications" },
-            new Provider { Id = "1011", Name = "Charter" },
-            new Provider { Id = "1012", Name = "Insight Communications" },
-            new Provider { Id = "1014", Name = "Mediacom" },
-            new Provider { Id = "1015", Name = "Cablevision" },
-            new Provider { Id = "1016", Name = "Cable One" },
-            new Provider { Id = "1017", Name = "Bright House Networks" },
-            new Provider { Id = "1018", Name = "Suddenlink" },
-            new Provider { Id = "1024", Name = "Massillon Cable" },
-            new Provider { Id = "1027", Name = "Clear Picture, Inc" },
-            new Provider { Id = "1099", Name = "LotsACable" },
-            new Provider { Id = "1111", Name = "Ridge Cable" },
-            new Provider { Id = "1236", Name = "Mythical Cable" },
-            new Provider { Id = "1237", Name = "NewMythical Cable" }
+            new Provider { Id = "2000", Name = "Local Test Cable Provider A" },
+            new Provider { Id = "2001", Name = "Local Test Cable Provider B" },
+            new Provider { Id = "2002", Name = "Local Test Cable Provider C" },
+            new Provider { Id = "2003", Name = "Local Test Cable Provider D" },
+            new Provider { Id = "2004", Name = "Local Test Cable Provider E" },
+            new Provider { Id = "2005", Name = "Local Test Cable Provider F" },
+            new Provider { Id = "2006", Name = "Local Test Cable Provider G" },
+            new Provider { Id = "2007", Name = "Local Test Cable Provider H" },
+            new Provider { Id = "2008", Name = "Local Test Cable Provider I" },
+            new Provider { Id = "2009", Name = "Local Test Cable Provider J" },
+            new Provider { Id = "2010", Name = "Local Test Cable Provider K" },
+            new Provider { Id = "2011", Name = "Local Test Cable Provider L" },
+            new Provider { Id = "2012", Name = "Local Test Cable Provider M" },
+            new Provider { Id = "2013", Name = "Local Test Cable Provider N" },
+            new Provider { Id = "2014", Name = "Local Test Cable Provider O" },
+            new Provider { Id = "2015", Name = "Local Test Cable Provider P" },
+            new Provider { Id = "2016", Name = "Local Test Cable Provider Q" }
         };
 
         /// <summary>
