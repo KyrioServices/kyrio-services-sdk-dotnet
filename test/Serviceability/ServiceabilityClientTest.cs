@@ -26,6 +26,7 @@ namespace Kyrio.Services.Serviceability
             account.ClientId = "999999";
             account.EnableTestMock = true;
             account.EnableTestError = false;
+            account.EnableQaEnvironment = true;
 
             var client = account.CreateServiceabilityClient();
             var results = client.DetermineBusinessServiceabilityAsync(

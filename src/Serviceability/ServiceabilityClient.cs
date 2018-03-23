@@ -10,8 +10,12 @@ namespace Kyrio.Services.Serviceability
     /// </summary>
     public class ServiceabilityClient: KyrioRestClient
     {
-        private const string BASE_ROUTE = "/api/v1";
+        private const string BASE_ROUTE = "/business/api/v1";
 
+        /// <summary>
+        /// Creates cliemt instance
+        /// </summary>
+        /// <param name="account">A Kyrio account this client is related to</param>
         public ServiceabilityClient(KyrioAccount account)
             : base(account)
         { }

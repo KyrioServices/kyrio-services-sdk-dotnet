@@ -16,7 +16,7 @@ namespace Kyrio.Services
         private static readonly Regex SERVER_URL_REGEX = new Regex(@"^(https?:\/\/)?[\w -]+(\.[\w-]+)+\.?(:\d+)?$", RegexOptions.IgnoreCase);
 
         private string _clientId;
-        private string _serverUrl = "http://localhost:7277";
+        private string _serverUrl;
         private bool _enableTestLocal = false;
         private bool _enableTestMock = false;
         private bool _enableTestError = false;
