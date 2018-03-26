@@ -15,7 +15,7 @@ To be able to develop and test it you need to install the following components:
 - Visual Studio 2017 Professional or Community Edition: https://www.visualstudio.com 
 - .NET Core SDK with Visual Studio extentions: https://www.microsoft.com/net/core 
 
-To work with GitHub code repository you need to install Git from: https://git-scm.com/downloads
+To work with the GitHub code repository you need to install Git from: https://git-scm.com/downloads
 
 If you plan to generate sourcecode documentation you need install Doxigen from: http://www.stack.nl/~dimitri/doxygen/download.html
 
@@ -36,12 +36,12 @@ dotnet restore src/src.csproj
 dotnet build src/src.csproj
 ```
 
-To generate source code documentation open Doxygen application and load project configuration
-from Doxyfile file located at in the root folder. Then check destination folders and click run button.
+To generate source code documentation open Doxygen the application and load the project configuration
+from Doxyfile file located at in the root folder. Then check the destination folders and click the run button.
 
 ## <a name="test"></a> Testing
 
-The tests can be executed inside the Visual Studio. If you prefer to use command line
+The tests can be executed inside the Visual Studio. If you prefer to use the command line
 use the following commands:
 
 ```bash
@@ -51,10 +51,10 @@ dotnet test test/test.csproj
 
 ## <a name="release"></a> Release
 
-Detail description of the NuGet release publishing procedure 
+A detailed description of the NuGet release publishing procedure 
 is described at http://docs.nuget.org/ndocs/create-packages/publish-a-package
 
-Before publishing a new release you shall register on NuGet site and get you API Key.
+Before publishing a new release you shall register on the NuGet site and get your API Key.
 Then register your API Key as:
 
 ```bash
@@ -62,7 +62,7 @@ nuget setApiKey Your-API-Key
 ```
 
 Update release notes in CHANGELOG. Update version number and release details in nuspec file.
-After that compile in Release (!!) configuration and test the project.
+After that, compile in Release (!!) configuration and test the project.
 Then create a nuget package:
 
 ```bash
