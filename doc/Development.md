@@ -74,3 +74,10 @@ Publish the package on nuget global repository
 ```bash
 nuget push Kyrio.Services.XXX.nupkg -Source https://www.nuget.org/api/v2/package
 ```
+
+Finally, remember to add and push release tag to git repository:
+
+```bash
+git tag vx.y.z
+git push origin master --tags
+```
