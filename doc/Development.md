@@ -1,6 +1,6 @@
 # Development Guide <br/> Kyrio Online Services SDK for .NET
 
-This document provides high-level instructions on how to build and test the microservice.
+This document provides high-level instructions on how to build and test the SDK.
 
 * [Environment Setup](#setup)
 * [Installing](#install)
