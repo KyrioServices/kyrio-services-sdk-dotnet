@@ -36,7 +36,7 @@ dotnet restore src/src.csproj
 dotnet build src/src.csproj
 ```
 
-To generate source code documentation open Doxygen the application and load the project configuration
+To generate source code documentation open the Doxygen application and load the project configuration
 from Doxyfile file located at in the root folder. Then check the destination folders and click the run button.
 
 ## <a name="test"></a> Testing
