@@ -44,6 +44,7 @@ class Program
 ## References
 
 - [API Documentation](https://rawgit.com/KyrioServices/kyrio-services-sdk-dotnet/master/doc/api/index.html)
+- [Development Guide](https://github.com/KyrioServices/kyrio-services-sdk-dotnet/blob/master/doc/Development.md)
 
 ## License
 
