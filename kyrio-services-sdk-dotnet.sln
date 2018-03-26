@@ -13,6 +13,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{253A893E-A3B1-487D-9B86-548EFD0E9F46}"
 	ProjectSection(SolutionItems) = preProject
 		CHANGELOG.md = CHANGELOG.md
+		Doxyfile = Doxyfile
 		kyrio-services-sdk-dotnet.nuspec = kyrio-services-sdk-dotnet.nuspec
 		LICENSE = LICENSE
 		README.md = README.md

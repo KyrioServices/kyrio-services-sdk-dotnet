@@ -9,12 +9,6 @@ namespace Kyrio.Services.Serviceability
     public enum LocationType
     {
         /// <summary>
-        /// Location does not exist or not listed
-        /// </summary>
-        [EnumMember(Value = "none")]
-        None,
-
-        /// <summary>
         /// Location type is unknown
         /// </summary>
         [EnumMember(Value = "unknown")]

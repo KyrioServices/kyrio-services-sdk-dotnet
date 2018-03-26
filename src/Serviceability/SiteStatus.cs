@@ -9,7 +9,7 @@ namespace Kyrio.Services.Serviceability
     public enum SiteStatus
     {
         /// <summary>
-        /// Indicates that cable services are not available
+        /// The provider did not provide a site status
         /// </summary>
         [EnumMember(Value = "none")]
         None,
@@ -39,9 +39,9 @@ namespace Kyrio.Services.Serviceability
         SurveyRequired,
 
         /// <summary>
-        /// Indicates that the MSO serves the general area such as the 5-digit ZIP code or locations
-        /// within a configurable distance (such as 60-feet or 200-feet). 
-        /// The MSO should be contacted for additional information about the serviceability of a location identified as ‘proximity’.
+        /// Indicates that the MSO serves the general area such as the 5-digit ZIP code. 
+        /// The MSO should be contacted for additional information about the serviceability
+        /// of a location identified as ‘proximity’
         /// </summary>
         [EnumMember(Value = "proximity")]
         Proximity

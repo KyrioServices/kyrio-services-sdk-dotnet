@@ -99,8 +99,8 @@ Inheritance diagram for Kyrio.Services.Serviceability.ServiceabilityClient:</div
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a856943911825636bfa49bbee3cf043f3"><td class="memItemLeft" align="right" valign="top"><a id="a856943911825636bfa49bbee3cf043f3"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>ServiceabilityClient</b> (<a class="el" href="class_kyrio_1_1_services_1_1_kyrio_account.html">KyrioAccount</a> account)</td></tr>
+<tr class="memitem:a856943911825636bfa49bbee3cf043f3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_kyrio_1_1_services_1_1_serviceability_1_1_serviceability_client.html#a856943911825636bfa49bbee3cf043f3">ServiceabilityClient</a> (<a class="el" href="class_kyrio_1_1_services_1_1_kyrio_account.html">KyrioAccount</a> account)</td></tr>
+<tr class="memdesc:a856943911825636bfa49bbee3cf043f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates cliemt instance  <a href="#a856943911825636bfa49bbee3cf043f3">More...</a><br /></td></tr>
 <tr class="separator:a856943911825636bfa49bbee3cf043f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aec9e7c024daa510dee1f944e29c0ff7e"><td class="memItemLeft" align="right" valign="top">async Task&lt; <a class="el" href="class_kyrio_1_1_services_1_1_serviceability_1_1_serviceability_result.html">ServiceabilityResult</a>[]&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_kyrio_1_1_services_1_1_serviceability_1_1_serviceability_client.html#aec9e7c024daa510dee1f944e29c0ff7e">DetermineBusinessServiceabilityAsync</a> (string addressLine1, string addressLine2, string city, string state, string postalCode, string countryCode)</td></tr>
 <tr class="memdesc:aec9e7c024daa510dee1f944e29c0ff7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determines cable providers that serve location specified by it's postal address. The method supports incomplete addresses: addressLine1 and postalCode or addressLine1, city and state.  <a href="#aec9e7c024daa510dee1f944e29c0ff7e">More...</a><br /></td></tr>
@@ -122,7 +122,7 @@ Private Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr class="memitem:abe610a2ae6a717af7de9695a3bdb619a"><td class="memItemLeft" align="right" valign="top"><a id="abe610a2ae6a717af7de9695a3bdb619a"></a>
-const string&#160;</td><td class="memItemRight" valign="bottom"><b>BASE_ROUTE</b> = &quot;/api/v1&quot;</td></tr>
+const string&#160;</td><td class="memItemRight" valign="bottom"><b>BASE_ROUTE</b> = &quot;/business/api/v1&quot;</td></tr>
 <tr class="separator:abe610a2ae6a717af7de9695a3bdb619a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
@@ -138,7 +138,34 @@ Additional Inherited Members</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Client to access <a class="el" href="namespace_kyrio.html">Kyrio</a> <a class="el" href="namespace_kyrio_1_1_services_1_1_serviceability.html">Serviceability</a> API </p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a856943911825636bfa49bbee3cf043f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a856943911825636bfa49bbee3cf043f3">&#9670;&nbsp;</a></span>ServiceabilityClient()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Kyrio.Services.Serviceability.ServiceabilityClient.ServiceabilityClient </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_kyrio_1_1_services_1_1_kyrio_account.html">KyrioAccount</a>&#160;</td>
+          <td class="paramname"><em>account</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Creates cliemt instance </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">account</td><td>A <a class="el" href="namespace_kyrio.html">Kyrio</a> account this client is related to</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
 <a id="aec9e7c024daa510dee1f944e29c0ff7e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aec9e7c024daa510dee1f944e29c0ff7e">&#9670;&nbsp;</a></span>DetermineBusinessServiceabilityAsync()</h2>
 
@@ -268,7 +295,7 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>src/Serviceability/ServiceabilityClient.cs</li>
+<li>D:/Repos/KyrioSharedServices/SDK/kyrio-services-sdk-dotnet/src/Serviceability/ServiceabilityClient.cs</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
